@@ -1,5 +1,4 @@
 import OpenAI from 'openai'
-import { createChatBotMessage, createClientMessage, createCustomMessage } from 'react-chatbot-kit'
 
 const openai = new OpenAI({
     apiKey: '03a0006726ac4055bad84abb9633c2ef',
@@ -32,7 +31,7 @@ class ActionProvider {
     }
 
     callGenAI = async(prompt) => {
-        const ChatCompletion = await openai.chat.completions.create(
+        const chatCompletion = await openai.chat.completions.create(
             {
               model: 'gpt-3.5-turbo', 
               messages: [
@@ -49,7 +48,7 @@ class ActionProvider {
     timer = ms => new Promise(res => setTimeout(res, ms))
 
     generateResponseMessage = async (userMessage) => {
-        const responseFromGPT = await callGenAI(userMessage)
+        const responseFromGPT = await this.callGenAI(userMessage)
         let message
         let numberNoLines = responseFromGPT.split('\n').length
         for(let i = 0; i < numberNoLines; i++){
