@@ -1,4 +1,4 @@
-import ActionProvider from "../ActionProvider";
+import ActionProvider from "./ActionProvider";
 
 class MessageParser{
     constructor(ActionProvider, state){
