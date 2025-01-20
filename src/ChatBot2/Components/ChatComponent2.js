@@ -5,7 +5,7 @@ import config from "../config"
 import ActionProvider from "../ActionProvider"
 import MessageParser from "../MessageParser"
 
-const ChatComponent = () => {
+const ChatComponent2 = () => {
     return(
         <div className="chatui">
             <Chatbot
@@ -17,4 +17,4 @@ const ChatComponent = () => {
     )
 }
 
-export default ChatComponent
+export default ChatComponent2
