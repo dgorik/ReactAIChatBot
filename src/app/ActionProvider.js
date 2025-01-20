@@ -31,17 +31,17 @@ class ActionProvider {
     }
 
     callGenAI = async(prompt) => {
-        const chatCompletion = await openai.chat.completions.create(
-            {
+        const chatCompletion = await openai.chat.completions.create({
+
               model: 'gpt-3.5-turbo', 
               messages: [
-                {role: "system", content: "You are a credit card advisor for the US market"},
+                {role: "system", content: "You are an expert of confectionary market in the US"},
                 {role: "user", content: prompt}
               ],
               temperature: 0.5,
               max_tokens: 50,
-            }
-        )
+
+        })
         return chatCompletion.choices[0].message.content
     }
 
@@ -54,7 +54,7 @@ class ActionProvider {
         for(let i = 0; i < numberNoLines; i++){
             const msg = responseFromGPT.split('\n')[i]
             if(msg.length){
-                message = this.createChatBotMessage()
+                message = this.createChatBotMessage(msg)
                 this.updateChatBotMessage(message)
             }
             await this.timer(1000)
