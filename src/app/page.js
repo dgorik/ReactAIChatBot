@@ -7,6 +7,7 @@ import "../ChatBot1/global.css";
 export default function Home() {
   return (
     <div >
+        <h2> {" AI Playground"} </h2>
         <ChatComponent1 />
         <ChatComponent2 />
     </div>

@@ -3,7 +3,7 @@ import { createChatBotMessage } from "react-chatbot-kit";
 const config = {
     botName: 'Advisor',
     initialMessages: [
-        createChatBotMessage("Hello I'm an expert of confectionary market in the US?")
+        createChatBotMessage("Hello, please type something to left so I can talk to my brother")
     ],
     customStyles: {
         botMessageBox: {
