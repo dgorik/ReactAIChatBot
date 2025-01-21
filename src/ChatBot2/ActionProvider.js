@@ -31,10 +31,11 @@ class ActionProvider {
     }
 
     callGenAI = async(prompt) => {
+        let x = new Date()
         const chatCompletion = await openai.chat.completions.create({
               model: 'gpt-3.5-turbo', 
               messages: [
-                {role: "system", content: "You are an expert of confectionary market in the US"},
+                {role: "system", content: `Hi, I'm Mark. I was born on`},
                 {role: "user", content: prompt}
               ],
               temperature: 0.5,
