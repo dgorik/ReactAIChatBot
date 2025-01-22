@@ -1,10 +1,10 @@
 import React from "react";
 import Dropdown from "./Dropdown"
+import styles from "./public/Page.module.css";
 
 const Header = () => {
     return (
-        <div>
-            <h2> {"AI Playground"} </h2>
+        <div className={styles.header}>
             <Dropdown/>
         </div>  
     )
