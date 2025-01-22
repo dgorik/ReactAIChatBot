@@ -1,8 +1,12 @@
+'use client'
 import React from "react";
 import { useState } from "react";
 import  "./public/Dropdown.css"
+import { LanguageState } from "./LanguageContext";
 
-const Dropdown = ({ language, setLanguage }) => {
+const Dropdown = () => {
+    const {language, setLanguage} = LanguageState()
+
     return (
         <div className="dropdown-container">
             <h2> Select your preferred language</h2>
@@ -12,8 +16,8 @@ const Dropdown = ({ language, setLanguage }) => {
                     onChange = {(e) => setLanguage (e.target.value)}
                 >
                     <option value={'EN'} >English</option>
-                    <option value={'ZH'}>Spanish</option>
-                    <option value={'EN'}>Chinese</option>
+                    <option value={'ES'}>Spanish</option>
+                    <option value={'ZH'}>Chinese</option>
                     <option value={'HI'}>Hindi</option>
                     <option value={'AR'}>Arabic</option>
                 </select>
