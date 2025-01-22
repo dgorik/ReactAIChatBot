@@ -1,5 +1,6 @@
 import * as React from "react"
 import "react-chatbot-kit/build/main.css"
+import  "@/app/public/Page.module.css"
 import Chatbot from "react-chatbot-kit"
 import config from "../config"
 import ActionProvider from "../ActionProvider"
