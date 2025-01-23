@@ -15,7 +15,7 @@ export const Config = (language) => {
   }
 
   return {
-    botName: 'Advisor',
+    botName: 'Buddy',
     initialMessages: [
         createChatBotMessage(language_translation[language])
     ],

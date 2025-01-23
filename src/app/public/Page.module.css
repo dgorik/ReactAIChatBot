@@ -23,7 +23,12 @@
 }
 
 .social_media_container a{
-    margin: 5%
+    /* margin: 5% */
+}
+
+.medium_anchor{
+    margin-left: 5%;
+    margin-right:  5%;
 }
 
 .main_page{
