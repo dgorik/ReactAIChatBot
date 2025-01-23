@@ -4,9 +4,14 @@ import styles from "./public/Page.module.css";
 const Footer = () => {
     return (
         <div div className={styles.footer}>
-            <h2> Designed and built by Daniel Gorbachev </h2>
+            <div className = {styles.social_media_container}>
+                <a href = "https://x.com/goribaldy19"> Twitter</a>
+                <a href = "https://www.linkedin.com/in/danielgorbachev1/"> LinkedIn</a>
+                <a href = "https://github.com/dgorik"> Github</a>
+            </div>
         </div>
     )
 }
 
 export default Footer
+

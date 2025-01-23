@@ -1,6 +1,6 @@
 import { createChatBotMessage } from "react-chatbot-kit";
 
-
+import styles from "@/app/public//ChatBot.css"
 
 export const Config = (language) => {
 
@@ -21,11 +21,11 @@ export const Config = (language) => {
     ],
     customStyles: {
         botMessageBox: {
-          backgroundColor: '#376B7E',
+          backgroundColor: "black",
         },
         chatButton: {
           backgroundColor: '#5ccc9d',
-        },
+        },  
     }
   }
 }

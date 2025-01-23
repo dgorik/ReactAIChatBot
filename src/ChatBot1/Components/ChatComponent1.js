@@ -1,7 +1,7 @@
 import * as React from "react"
 import  { useEffect, useState} from 'react';
 import "react-chatbot-kit/build/main.css"
-import  "@/app/public/Page.module.css"
+import  "@/app/public/ChatBot.css"
 import { LanguageState } from '@/app/LanguageContext';
 import Chatbot from "react-chatbot-kit"
 import Config from "../config"
