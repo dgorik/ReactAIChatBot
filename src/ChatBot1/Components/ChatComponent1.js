@@ -10,7 +10,7 @@ import MessageParser from "../MessageParser"
 
 const ChatComponent1 = () => {
    const {language} = LanguageState()
-   const [botConfig, setBotConfig] = useState(Config(language));;
+   const [botConfig, setBotConfig] = useState(language);;
 
     useEffect(() => {
         setBotConfig(Config(language));  // Update the config whenever language changes
@@ -19,7 +19,7 @@ const ChatComponent1 = () => {
     return(
         <div className="chatui">
             <Chatbot
-            config = {botConfig}
+            config = {botConfig} key={JSON.stringify(botConfig)} 
             actionProvider = {ActionProvider}
             messageParser={MessageParser}
             />

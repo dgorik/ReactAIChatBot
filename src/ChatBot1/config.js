@@ -1,7 +1,5 @@
 import { createChatBotMessage } from "react-chatbot-kit";
-import { useState } from "react";
-import Dropdown from "@/app/Dropdown";
-import { LanguageState } from "../app/LanguageContext";
+
 
 
 export const Config = (language) => {
@@ -16,14 +14,10 @@ export const Config = (language) => {
     "HI": "नमस्ते, मेरा नाम Buddy है, मैं आपकी कैसे मदद कर सकता हूँ?"
   }
 
-  const language_selected = () => {
-    return language_translation[language];
-  }; 
-
   return {
     botName: 'Advisor',
     initialMessages: [
-        createChatBotMessage(`${language_selected()}`)
+        createChatBotMessage(language_translation[language])
     ],
     customStyles: {
         botMessageBox: {
